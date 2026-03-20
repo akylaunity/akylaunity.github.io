@@ -1,0 +1,424 @@
+:root {
+  --bg: #0b0f1a;
+  --card: #121829;
+  --text: #ffffff;
+  --accent: #4db8ff;
+  --muted: #bfc7d9;
+}
+
+body.light {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #111111;
+  --accent: #4db8ff;
+  --muted: #5f6b85;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: var(--card);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--text);
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.75;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* THEME BUTTON */
+#themeToggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--accent);
+  color: black;
+}
+
+.secondary {
+  border: 1px solid var(--accent);
+  color: var(--text);
+}
+
+/* SECTIONS */
+.features,
+.download,
+.socials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features h2,
+.download h2,
+.socials h2,
+.support-page h2 {
+  margin-bottom: 15px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* DOWNLOAD */
+.big {
+  font-size: 18px;
+}
+
+/* SOCIALS */
+.social-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social {
+  padding: 10px 15px;
+  background: var(--card);
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.social:hover {
+  transform: translateY(-2px);
+}
+
+/* SUPPORT PAGE */
+.support-page {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.support-subtext {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.support-box {
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.support-btn {
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  transition: 0.2s;
+}
+
+.support-btn:hover {
+  transform: translateY(-2px);
+}
+
+.telegram {
+  background: #2AABEE;
+  color: white;
+}
+
+.mail {
+  background: #444;
+  color: white;
+}
+
+body.light .mail {
+  background: #e7e7e7;
+  color: #111;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+  color: var(--text);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+}
+.download {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.download h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.download p {
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.download-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.download-btn:hover {
+  transform: translateY(-4px);
+}
+.donate-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.donate-box {
+  max-width: 600px;
+  width: 100%;
+  background: #121829;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.donate-box h2 {
+  margin-bottom: 10px;
+}
+
+.donate-text {
+  opacity: 0.7;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* QR */
+.qr-box {
+  margin-bottom: 25px;
+}
+
+.qr-box img {
+  width: 180px;
+  border-radius: 12px;
+  background: white;
+  padding: 10px;
+}
+
+.qr-box p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* КАРТА */
+.donate-card {
+  background: #0b0f1a;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.number {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+
+.owner {
+  opacity: 0.8;
+}
+
+/* КНОПКА */
+.copy-btn {
+  padding: 12px 20px;
+  background: #4db8ff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.copy-btn:hover {
+  transform: translateY(-2px);
+}
+
+.copy-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4db8ff;
+}
+.btn.donate {
+  background: linear-gradient(135deg, #4db8ff, #7a5cff);
+  color: black;
+  font-weight: bold;
+}
+
+.btn.donate:hover {
+  transform: translateY(-2px);
+}
+.btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn.outline {
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  transition: 0.2s;
+}
+
+.btn.outline:hover {
+  border-color: #4db8ff;
+  color: #4db8ff;
+  background: rgba(77, 184, 255, 0.08);
+}
