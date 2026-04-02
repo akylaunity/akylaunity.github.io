@@ -3,61 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Поддержка автора — QUTTY</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Поддержать проект — QUTTY</title>
+  <link rel="stylesheet" href="style.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+<!-- ══════════ HEADER ══════════ -->
 <header class="header">
-  <div class="logo">
+  <a href="index.html" class="logo">
     <img src="images/logo.png" alt="QUTTY">
-    <h1>QUTTY</h1>
-  </div>
+    <span class="logo-name">QUTTY</span>
+  </a>
 
-  <div class="nav">
-    <a href="index.html">Главная</a>
-    <a href="support.html">Поддержка</a>
-    <a href="donate.html">Поддержка автора</a>
-  </div>
+  <nav class="nav">
+    <a href="index.html"   class="nav-link">Главная</a>
+    <a href="index.html#features" class="nav-link">Функции</a>
+    <a href="index.html#download" class="nav-link">Скачать</a>
+    <a href="support.html" class="nav-link">Поддержка</a>
+    <a href="donate.html"  class="nav-btn donate active"><i class="fa-regular fa-heart"></i>Поддержать</a>
+    <button id="themeToggle" aria-label="Сменить тему"><i class="fa-regular fa-moon"></i></button>
+  </nav>
 </header>
 
-<section class="donate-page">
-  <div class="donate-box">
-
-    <h2>Поддержка автора QUTTY</h2>
-
-    <p class="donate-text">
-      Все средства пойдут на разработку мессенджера QUTTY,
-      развитие проекта, дизайн, хостинг и новые функции.
-    </p>
-
-    <!-- QR КОД -->
-    <div class="qr-box">
-      <img src="images/qr.png" alt="QR код для доната">
-      <p>Отсканируйте QR-код для перевода</p>
-    </div>
-
-    <!-- КАРТА -->
-    <div class="donate-card">
-      <div class="label">Номер карты</div>
-      <div class="number">2202 2082 0192 1617</div>
-      <div class="owner">Сбербанк — Владислав М.</div>
-    </div>
-
-    <button class="copy-btn" onclick="copyCard()">Скопировать номер</button>
-
-    <p id="copyText" class="copy-text"></p>
-
-  </div>
+<!-- ══════════ PAGE HERO ══════════ -->
+<div class="page-wrap">
+<section class="page-hero">
+  <div class="section-label">Донат</div>
+  <h1>Поддержать проект</h1>
+  <p>Ваш вклад помогает развивать QUTTY — дизайн, хостинг и новые функции.</p>
 </section>
+
+<!-- ══════════ DONATE CARD ══════════ -->
+<section class="donate-section">
+  <div class="donate-card">
+
+    <div class="donate-header">
+      <p>Каждый перевод помогает развитию проекта QUTTY</p>
+    </div>
+
+    <div class="donate-body">
+      <!-- QR -->
+      <div class="qr-block">
+        <img src="images/qr.png" alt="QR код">
+        <p>Отсканируйте QR-код для перевода</p>
+      </div>
+
+      <!-- Card -->
+      <div class="card-block">
+        <div class="card-label">Номер карты (Сбербанк)</div>
+        <div class="card-number">2202 2082 0192 1617</div>
+        <div class="card-owner">Владислав М.</div>
+      </div>
+
+      <button class="copy-btn" onclick="copyCard()"><i class="fa-regular fa-copy"></i>Скопировать номер карты</button>
+      <p id="copyStatus" class="copy-status"></p>
+    </div>
+  </div>
+
+  <p style="text-align:center;margin-top:24px;font-size:13px;color:var(--text2);">
+    Спасибо за поддержку QUTTY
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 QUTTY — Все права защищены</p>
+</footer>
+</div>
 
 <script>
 function copyCard() {
-  navigator.clipboard.writeText("2202208201921617");
-  document.getElementById("copyText").textContent = "Скопировано ✔";
+  navigator.clipboard.writeText("2202208201921617").then(() => {
+    const s = document.getElementById("copyStatus");
+    s.textContent = "Скопировано";
+    setTimeout(() => s.textContent = "", 2500);
+  });
 }
 </script>
-
 <script src="script.js"></script>
 </body>
 </html>

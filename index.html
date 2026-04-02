@@ -3,97 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QUTTY</title>
-  <link rel="stylesheet" href="style.css">
+  <title>QUTTY — Современный мессенджер</title>
+  <link rel="stylesheet" href="style.css">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+<!-- ══════════ HEADER ══════════ -->
 <header class="header">
-  <div class="logo">
+  <a href="index.html" class="logo">
     <img src="images/logo.png" alt="QUTTY">
-    <h1>QUTTY</h1>
-  </div>
+    <span class="logo-name">QUTTY</span>
+  </a>
 
-  <div class="nav">
-   <a href="#features" class="btn outline">Функции</a>
-   <a href="#download" class="btn outline">Скачать</a>
-   <a href="#socials" class="btn outline">Соцсети</a>
-   <a href="support.html" class="btn outline">Поддержка</a>
-    <a href="donate.html" class="btn donate">Поддержать проект</a>
-  </div>
-
-  <button id="themeToggle">🌙</button>
+  <nav class="nav">
+    <a href="#features"  class="nav-link">Функции</a>
+    <a href="#download"  class="nav-link">Скачать</a>
+    <a href="#socials"   class="nav-link">Соцсети</a>
+    <a href="support.html" class="nav-link">Поддержка</a>
+    <a href="donate.html"  class="nav-btn donate"><i class="fa-regular fa-heart"></i>Поддержать</a>
+    <button id="themeToggle" aria-label="Сменить тему"><i class="fa-regular fa-moon"></i></button>
+  </nav>
 </header>
 
+<!-- ══════════ HERO ══════════ -->
+<div class="page-wrap">
 <section class="hero">
-  <h2>QUTTY</h2>
-  <p>Современный мессенджер с каналами, чатами и без платных функций</p>
+  <div class="hero-glow"></div>
+  <div class="hero-badge">Мессенджер нового поколения</div>
+  <h1>Общайтесь<br>свободно с <span>QUTTY</span></h1>
+  <p>Каналы, групповые чаты, звонки и истории — всё бесплатно. Без платных функций.</p>
+  <div class="hero-buttons">
+    <a href="#download" class="btn-primary">⬇ Скачать</a>
+    <a href="#features" class="btn-secondary">Узнать больше</a>
+  </div>
+</section>
 
-  <div class="buttons">
-   <section id="download" class="download">
-  <h2>Скачать QUTTY</h2>
-  <p>Доступно на всех платформах (в разработке) </p>
+<div class="divider"></div>
 
-  <div class="download-buttons">
-    <a href="#" class="download-btn">
+<!-- ══════════ FEATURES ══════════ -->
+<section id="features" class="section center">
+  <div class="section-label">Возможности</div>
+  <h2 class="section-title">Всё что нужно для общения</h2>
+  <p class="section-sub">QUTTY объединяет лучшее из мессенджеров в одном приложении — без лишнего.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-regular fa-comments"></i></div>
+      <div class="feature-title">Чаты и группы</div>
+      <div class="feature-desc">Личные переписки и групповые чаты без ограничений</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-bullhorn"></i></div>
+      <div class="feature-title">Каналы</div>
+      <div class="feature-desc">Создавайте и читайте каналы любой тематики</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-regular fa-images"></i></div>
+      <div class="feature-title">Истории</div>
+      <div class="feature-desc">Делитесь моментами со своими подписчиками</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-phone-volume"></i></div>
+      <div class="feature-title">Звонки</div>
+      <div class="feature-desc">Голосовые и видеозвонки в высоком качестве</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+      <div class="feature-title">Реакции</div>
+      <div class="feature-desc">Реагируйте на сообщения с помощью эмодзи</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="feature-title">Поиск</div>
+      <div class="feature-desc">Быстрый поиск по сообщениям, файлам и контактам</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════ DOWNLOAD ══════════ -->
+<section id="download" class="section center">
+  <div class="section-label">Скачать</div>
+  <h2 class="section-title">Доступно на всех платформах</h2>
+  <p class="section-sub">Версии для всех устройств в активной разработке. Следите за обновлениями!</p>
+
+  <div class="download-grid">
+    <a href="#" class="dl-btn" onclick="return comingSoon(event)">
       <img src="images/windows.png" alt="Windows">
       <span>Windows</span>
+      <span class="dl-badge">Скоро</span>
     </a>
-
-    <a href="#" class="download-btn">
+    <a href="#" class="dl-btn" onclick="return comingSoon(event)">
       <img src="images/android.png" alt="Android">
       <span>Android</span>
+      <span class="dl-badge">Скоро</span>
     </a>
-
-    <a href="#" class="download-btn">
+    <a href="#" class="dl-btn" onclick="return comingSoon(event)">
       <img src="images/apple.png" alt="iOS">
       <span>iOS</span>
+      <span class="dl-badge">Скоро</span>
     </a>
-
-    <a href="#" class="download-btn">
-      <img src="images/mac.png" alt="MacOS">
-      <span>MacOS</span>
+    <a href="#" class="dl-btn" onclick="return comingSoon(event)">
+      <img src="images/mac.png" alt="macOS">
+      <span>macOS</span>
+      <span class="dl-badge">Скоро</span>
     </a>
   </div>
 </section>
-    <a href="#features" class="btn secondary">Подробнее</a>
+
+<div class="divider"></div>
+
+<!-- ══════════ SOCIALS ══════════ -->
+<section id="socials" class="section center">
+  <div class="section-label">Сообщество</div>
+  <h2 class="section-title">Мы в соцсетях</h2>
+  <p class="section-sub">Подписывайтесь на новости и обновления проекта</p>
+
+  <div class="socials-grid">
+    <a href="https://t.me/quttymessanger" target="_blank" class="social-link">
+      <span><i class="fa-brands fa-telegram"></i></span> Telegram
+    </a>
+    <a href="https://www.youtube.com/@QuttyMessenger" target="_blank" class="social-link">
+      <i class="fa-brands fa-youtube"></i> YouTube
+    </a>
+    <a href="https://www.tiktok.com/@qutty_message?_r=1&_t=ZT-956Q7cDpA6v" target="_blank" class="social-link">
+      <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
   </div>
 </section>
 
-<section id="features" class="features">
-  <h2>Функции</h2>
-
-  <div class="grid">
-    <div class="card">💬 Чаты и группы</div>
-    <div class="card">📢 Каналы</div>
-    <div class="card">📸 Истории</div>
-    <div class="card">📞 Звонки</div>
-    <div class="card">🔥 Реакции</div>
-    <div class="card">🔍 Поиск</div>
-  </div>
-</section>
-
-<section id="download" class="download">
-  <h2>Скачать QUTTY</h2>
-  <p>Скоро доступно на всех платформах</p>
-  <a href="#" class="btn primary big">Скачать</a>
-</section>
-
-<section id="socials" class="socials">
-  <h2>Мы в соцсетях</h2>
-
-  <div class="social-grid">
-    <a href="https://t.me/quttymessanger" class="social">Telegram</a>
-    <a href="https://www.youtube.com/@QuttyMessenger" class="social">YouTube</a>
-    
-  </div>
-</section>
-
+<!-- ══════════ FOOTER ══════════ -->
 <footer>
-  <p>© 2026 QUTTY</p>
+  <p>© 2026 QUTTY — Все права защищены</p>
 </footer>
+</div>
 
+<script>
+function comingSoon(e) {
+  e.preventDefault();
+  alert("Эта платформа ещё в разработке. Следите за обновлениями в нашем Telegram.");
+  return false;
+}
+</script>
 <script src="script.js"></script>
-
 </body>
 </html>

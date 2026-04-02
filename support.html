@@ -3,50 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Поддержка QUTTY</title>
+  <title>Поддержка — QUTTY</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">
+  <a href="index.html" class="logo">
     <img src="images/logo.png" alt="QUTTY">
-    <h1>QUTTY</h1>
-  </div>
+    <span class="logo-name">QUTTY</span>
+  </a>
 
-  <div class="nav">
-    <a href="index.html">Главная</a>
-    <a href="support.html">Поддержка</a>
-  </div>
-
-  <button id="themeToggle">🌙</button>
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="index.html#features" class="nav-link">Функции</a>
+    <a href="index.html#download" class="nav-link">Скачать</a>
+    <a href="support.html" class="nav-link active">Поддержка</a>
+    <a href="donate.html" class="nav-btn donate"><i class="fa-regular fa-heart"></i>Поддержать</a>
+    <button id="themeToggle" aria-label="Сменить тему"><i class="fa-regular fa-moon"></i></button>
+  </nav>
 </header>
 
-<section class="support-page">
-  <h2>Поддержка QUTTY</h2>
+<div class="page-wrap">
+<section class="page-hero">
+  <div class="section-label">Помощь</div>
+  <h1>Поддержка QUTTY</h1>
+  <p>Свяжитесь с нами удобным способом.</p>
+</section>
 
-  <p class="support-subtext">
-    По вопросам поддержки напишите нам:
-  </p>
-
-  <div class="support-box">
-
-    <a href="mailto:quttyhelp@gmail.com" class="support-email">
-      quttyhelp@gmail.com
+<section class="contact-section">
+  <div class="quick-contacts">
+    <a href="mailto:quttyhelp@gmail.com" class="contact-link">
+      <i class="fa-regular fa-envelope contact-icon"></i>
+      <div>
+        <div style="font-weight:600;">Email</div>
+        <div style="font-size:13px;opacity:0.65;">quttyhelp@gmail.com</div>
+      </div>
     </a>
 
-    <p class="support-text">
-      Или воспользуйтесь Telegram-ботом (в разработке)
-    </p>
-
-    <a href="@quttyidea_bot" target="_blank" class="support-btn telegram">
-      💬 Поддержка в Telegram
+    <a href="https://t.me/quttyidea_bot" target="_blank" class="contact-link">
+      <i class="fa-brands fa-telegram contact-icon"></i>
+      <div>
+        <div style="font-weight:600;">Telegram бот</div>
+        <div style="font-size:13px;opacity:0.65;">@quttyidea_bot</div>
+      </div>
     </a>
-
   </div>
 </section>
 
-<script src="script.js"></script>
+<footer>
+  <p>© 2026 QUTTY — Все права защищены</p>
+</footer>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
